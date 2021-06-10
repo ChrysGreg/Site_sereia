@@ -2543,6 +2543,11 @@
       var element = document.getElementById('call-me-baby');
       element.style.right = '20px';
     }, Math.random() * 12000 + 5000);
+    
+    document.querySelector('button.btn.btn-xl').addEventListener('click',()=>{
+      ga('send', 'click', 'forms', 'submit')
+     })
+    //evento para traquear resposta forms
   </script>
 
 </body>
