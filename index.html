@@ -941,9 +941,10 @@
      document.addEventListener('scroll', func)
     //Evento para rolagem da pagina
     
-    var time = setTimeout(function(){
-      ga('send', 'event', 'time', '1min', 'SiteSereia');
-    }, 60000);
+    var time = function(){
+      setTimeout(function(){
+        ga('send', 'event', 'time', '1min', 'SiteSereia');
+    }, 60000)};
     window.addEventListener('load', time);
     // Evento de permanencia na pagina 1 min ou mais; está quebrado por motivos não sei, mas ta funcionando
     
