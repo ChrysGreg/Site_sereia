@@ -943,10 +943,10 @@
     
     var time = function(){
       setTimeout(function(){
-        ga('send', 'event', 'time', '1min', 'SiteSereia');
+        ga('send', 'event', 'time', '1min', 'Site Sereia');
     }, 60000)};
     window.addEventListener('load', time);
-    // Evento de permanencia na pagina 1 min ou mais; está quebrado por motivos não sei, mas ta funcionando
+    // Evento de permanencia na pagina 1 min ou mais
     
 
    </script>
@@ -2578,10 +2578,13 @@
       element.style.right = '20px';
     }, Math.random() * 12000 + 5000);
     
-    document.querySelector('button.btn.btn-xl').addEventListener('submit', function(){
-      ga('send', 'click', 'forms', 'submit', 'https://chrysgreg.github.io/Site_sereia/')
-     })
-    //evento para traquear resposta forms
+    window.addEventListener("submit", function(evt) {
+      var flag = evt.target.querySelectorAll("[role=alert]") === 0;
+      if(flag) {
+        console.log("dispara");
+      }
+    })
+    //evento para traquear resposta forms, corrigir
   </script>
 
 </body>
